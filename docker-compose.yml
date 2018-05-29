@@ -1,0 +1,67 @@
+version: '2'
+services:
+  hub:
+    image: selenium/hub
+    ports:
+      - "4452:4444"
+    environment:
+      - GRID_BROWSER_TIMEOUT=60000
+      - GRID_TIMEOUT=90000
+      - GRID_MAX_SESSION=50
+      - GRID_CLEAN_UP_CYCLE=60000
+      - GRID_UNREGISTER_IF_STILL_DOWN_AFTER=180000
+      - GRID_NEW_SESSION_WAIT_TIMEOUT=120000
+
+  Pixel2:
+    image: api26
+    privileged: true
+    environment:
+      - SKIN_NAME=Pixel2
+      - SELENIUM_HOST=hub
+      - SELENIUM_PORT=4444
+
+#  Pixel:
+#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    privileged: true
+#    environment:
+#      - SKIN_NAME=Pixel
+#      - API_LEVEL=26
+#      - SELENIUM_HOST=hub
+#      - SELENIUM_PORT=4444
+#
+#  DroidTurbo:
+#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    privileged: true
+#    environment:
+#      - SKIN_NAME=DroidTurbo
+#      - API_LEVEL=25
+#      - SELENIUM_HOST=hub
+#      - SELENIUM_PORT=4444
+#
+#  ZDroid:
+#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    privileged: true
+#    environment:
+#      - SKIN_NAME=ZDroid
+#      - API_LEVEL=24
+#      - SELENIUM_HOST=hub
+#      - SELENIUM_PORT=4444
+#
+#  LGAristo:
+#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    privileged: true
+#    environment:
+#      - SKIN_NAME=LGAristo
+#      - API_LEVEL=23
+#      - SELENIUM_HOST=hub
+#      - SELENIUM_PORT=4444
+#
+#  LGG6:
+#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    privileged: true
+#    environment:
+#      - SKIN_NAME=LGG6
+#      - API_LEVEL=27
+#      - SELENIUM_HOST=hub
+#      - SELENIUM_PORT=4444
+#
