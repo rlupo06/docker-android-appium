@@ -21,7 +21,7 @@ services:
       - SELENIUM_PORT=4444
 
 #  Pixel:
-#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    image: 
 #    privileged: true
 #    environment:
 #      - SKIN_NAME=Pixel
@@ -30,7 +30,7 @@ services:
 #      - SELENIUM_PORT=4444
 #
 #  DroidTurbo:
-#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    image:
 #    privileged: true
 #    environment:
 #      - SKIN_NAME=DroidTurbo
@@ -39,7 +39,7 @@ services:
 #      - SELENIUM_PORT=4444
 #
 #  ZDroid:
-#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    image: 
 #    privileged: true
 #    environment:
 #      - SKIN_NAME=ZDroid
@@ -48,7 +48,7 @@ services:
 #      - SELENIUM_PORT=4444
 #
 #  LGAristo:
-#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    image: 
 #    privileged: true
 #    environment:
 #      - SKIN_NAME=LGAristo
@@ -57,7 +57,7 @@ services:
 #      - SELENIUM_PORT=4444
 #
 #  LGG6:
-#    image: ofw-docker.artifactory.avirat.net/rlupo/android-appium:1.0.1
+#    image: 
 #    privileged: true
 #    environment:
 #      - SKIN_NAME=LGG6
